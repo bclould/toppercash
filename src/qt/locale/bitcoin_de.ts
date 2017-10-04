@@ -331,7 +331,7 @@ Dieses Produkt enthält Software, die vom OpenSSL-Projekt zur Verwendung im Open
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+333"/>
+        <location filename="../bitcoingui.cpp" line="+335"/>
         <source>Sign &amp;message...</source>
         <translation>&amp;Nachricht signieren...</translation>
     </message>
@@ -461,15 +461,19 @@ Dieses Produkt enthält Software, die vom OpenSSL-Projekt zur Verwendung im Open
         <translation>Nachricht &amp;verifizieren...</translation>
     </message>
     <message>
-        <location line="-232"/>
-        <location line="+617"/>
+        <location line="+385"/>
         <source>toppercash</source>
         <translation>toppercash</translation>
     </message>
     <message>
-        <location line="-617"/>
+        <location line="-618"/>
         <source>Wallet</source>
         <translation>Wallet</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>TOPPERCASH</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+44"/>
@@ -487,7 +491,7 @@ Dieses Produkt enthält Software, die vom OpenSSL-Projekt zur Verwendung im Open
         <translation type="unfinished">Transaktion</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+163"/>
         <source>&amp;About toppercash</source>
         <translation>&amp;Über toppercash</translation>
     </message>
@@ -797,6 +801,32 @@ Adresse: %4</translation>
         <location filename="../bitcoin.cpp" line="+112"/>
         <source>A fatal error occurred. toppercash can no longer continue safely and will quit.</source>
         <translation>Ein fataler Fehler ist aufgetreten. toppercash kann nicht fortgesetzt werden und wird beendet.</translation>
+    </message>
+</context>
+<context>
+    <name>BlockBrowser</name>
+    <message>
+        <location filename="../forms/blockbrowser.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished">Formular</translation>
+    </message>
+</context>
+<context>
+    <name>BlockBrowserModel</name>
+    <message>
+        <location filename="../blockbrowsermodel.cpp" line="+38"/>
+        <source>Date</source>
+        <translation type="unfinished">Datum</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Index</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>BlockHash</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1569,6 +1599,11 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+3"/>
         <source>Address does not refer to a key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../blockbrowsermodel.cpp" line="+57"/>
+        <source>%1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2870,6 +2905,19 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
 </context>
 <context>
+    <name>pubitem</name>
+    <message>
+        <location filename="../forms/pubitem.ui" line="+26"/>
+        <source>Form</source>
+        <translation type="unfinished">Formular</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>PubKey:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>toppercash-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+171"/>
@@ -3539,19 +3587,6 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation>Sie müssen den Wert rpcpassword=&lt;passwort&gt; in der Konfigurationsdatei angeben:
 %s
 Falls die Konfigurationsdatei nicht existiert, erzeugen Sie diese bitte mit Leserechten nur für den Dateibesitzer.</translation>
-    </message>
-</context>
-<context>
-    <name>pubitem</name>
-    <message>
-        <location filename="../forms/pubitem.ui" line="+26"/>
-        <source>Form</source>
-        <translation type="unfinished">Formular</translation>
-    </message>
-    <message>
-        <location line="+47"/>
-        <source>PubKey:</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

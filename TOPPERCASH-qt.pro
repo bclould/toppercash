@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = toppercash
+TARGET = TPC
 VERSION = 1.2.1
 
 INCLUDEPATH += src src/json src/qt
@@ -16,10 +16,10 @@ macx{
     BDB_LIB_PATH=/usr/local/opt/berkeley-db4/lib
     OPENSSL_INCLUDE_PATH=/usr/local/opt/openssl/include
     OPENSSL_LIB_PATH=/usr/local/opt/openssl/lib
-    MINIUPNPC_INCLUDE_PATH=/usr/local/include/
-    MINIUPNPC_LIB_PATH=/usr/local/lib
-    QRENCODE_INCLUDE_PATH=/usr/local/include
-    QRENCODE_LIB_PATH=/usr/local/lib
+    MINIUPNPC_INCLUDE_PATH=/usr/local/opt/miniupnpc/include
+    MINIUPNPC_LIB_PATH=/usr/local/opt/miniupnpc/lib
+    QRENCODE_INCLUDE_PATH=/usr/local/opt/qrencode/include
+    QRENCODE_LIB_PATH=/usr/local/opt/qrencode/lib
 }
 
 windows{

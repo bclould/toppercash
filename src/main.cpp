@@ -977,7 +977,7 @@ static CBigNum GetProofOfStakeLimit(int nHeight)
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int64_t nFees)
 {
-    int64_t nSubsidy = IPO_SHARE/Params().LastPOWBlock();
+    int64_t nSubsidy = (5000000 * COIN)/Params().LastPOWBlock();
 
     LogPrint("creation", "GetProofOfWorkReward() : create=%s nSubsidy=%d\n", FormatMoney(nSubsidy), nSubsidy);
 
@@ -987,8 +987,33 @@ int64_t GetProofOfWorkReward(int64_t nFees)
 // miner's coin stake reward
 int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees)
 {
-//    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);
-    return nFees;
+    //int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);
+    const double stakes[] = {1580000.00,1899792.00,2226860.19,2549630.21,2856732.15,3137847.85,3384370.28,3589827.82,3750066.90,3863218.73,3929495.94,3950873.82,3930709.84,3873347.78,3783741.84,3667124.72,3528732.86,3373593.28,3206370.33,3031266.01,2851965.89,2671621.20,2492858.49,2317808.65,2148148.59,1985150.02,1829731.11,1682507.86,1543843.10,1413891.70};
+    const double reward[] = {100000,120240.00,140940.52,161369.00,180805.83,198597.97,214200.65,227204.29,237346.01,244507.51,248702.27,250055.30,248779.10,245148.59,239477.33,232096.50,223337.52,213518.56,202934.83,191852.28,180504.17,169089.95,157775.85,146696.75,135958.77,125642.41,115805.77,106487.84,97711.59,89486.82};
+    const double rate[] = {33.60,30.24,27.22,24.49,22.04,19.84,17.86,16.07,14.46,13.02,11.72,10.54,9.49,8.54,7.69,6.92,6.23,5.60,5.04,4.54,4.08,3.68,3.31,2.98,2.68,2.41,2.17,1.95,1.76,1.58};
+    int height = nBestHeight - 10000;
+    int year = height / 52560;
+    int remain = height % 52560;
+
+    if(remain > 0 && year > 0)
+    {
+        year ++;
+    }
+    //计算额外奖励 0-50000个区块 每50个 获得一个额外奖励。根据每一年的奖励总量
+    //    int64_t nReward = 0;
+    //    if(remain <= 50000 && remain % 50 == 0)
+    //    {
+    //           nReward = reward[year] / 1000 * COIN;
+    //    }
+    //    int64_t nSubsidy = (stakes[year] + reward[year]) / 52560 * COIN + nReward;
+    int64_t nSubsidy = nCoinAge * (CENT * rate[year]) * 33 / (365 * 33 + 8);
+    //检查系统货币供应量
+    if(pindexBest->nMoneySupply + nSubsidy > IPO_SHARE )
+    {
+        nSubsidy = IPO_SHARE - pindexBest->nMoneySupply;
+    }
+
+    return nSubsidy + nFees;
 }
 
 static const int64_t nTargetTimespan = 16 * 60;  // 16 mins

@@ -26,11 +26,12 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     tab(tab)
 {
     ui->setupUi(this);
-    //    ui->createmulsig->setVisible(false);
+        ui->createmulsig->setVisible(false);
 #ifdef Q_OS_MAC // Icons on push buttons are very uncommon on Mac
     ui->newAddressButton->setIcon(QIcon());
     ui->copyToClipboard->setIcon(QIcon());
     ui->deleteButton->setIcon(QIcon());
+
 #endif
 
 #ifndef USE_QRCODE

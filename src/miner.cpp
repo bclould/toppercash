@@ -12,7 +12,7 @@ using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// hyhcMiner
+// TpcMiner
 //
 extern bool fRequestShutdown;
 extern unsigned int nMinerSleep;
@@ -580,7 +580,7 @@ void ThreadBitcoinMiner(CWallet *pwallet )
             return;
         IncrementExtraNonce(pblock.get(), pindexPrev, nExtraNonce);
 
-        //printf("Running hyhcMiner with %llu transactions in block (%u bytes)\n", pblock->vtx.size(),
+        //printf("Running TpcMiner with %llu transactions in block (%u bytes)\n", pblock->vtx.size(),
           //     ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //

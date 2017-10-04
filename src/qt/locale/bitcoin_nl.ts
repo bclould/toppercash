@@ -319,7 +319,7 @@ Copyright © 2014 De toppercash ontwikkelaars</translation>
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+333"/>
+        <location filename="../bitcoingui.cpp" line="+335"/>
         <source>Sign &amp;message...</source>
         <translation>&amp;Onderteken bericht...</translation>
     </message>
@@ -449,15 +449,19 @@ Copyright © 2014 De toppercash ontwikkelaars</translation>
         <translation>&amp;Verifiëer bericht...</translation>
     </message>
     <message>
-        <location line="-232"/>
-        <location line="+617"/>
+        <location line="+385"/>
         <source>toppercash</source>
         <translation>toppercash</translation>
     </message>
     <message>
-        <location line="-617"/>
+        <location line="-618"/>
         <source>Wallet</source>
         <translation>Portemonnee</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>TOPPERCASH</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+44"/>
@@ -475,7 +479,7 @@ Copyright © 2014 De toppercash ontwikkelaars</translation>
         <translation type="unfinished">Transactie</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+163"/>
         <source>&amp;About toppercash</source>
         <translation>&amp;Over toppercash</translation>
     </message>
@@ -785,6 +789,32 @@ Adres: %4
         <location filename="../bitcoin.cpp" line="+112"/>
         <source>A fatal error occurred. toppercash can no longer continue safely and will quit.</source>
         <translation>Een fatale fout . toppercash kan niet langer veilig doorgaan en sluit af.</translation>
+    </message>
+</context>
+<context>
+    <name>BlockBrowser</name>
+    <message>
+        <location filename="../forms/blockbrowser.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished">Vorm</translation>
+    </message>
+</context>
+<context>
+    <name>BlockBrowserModel</name>
+    <message>
+        <location filename="../blockbrowsermodel.cpp" line="+38"/>
+        <source>Date</source>
+        <translation type="unfinished">Datum</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Index</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>BlockHash</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1570,6 +1600,11 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message>
         <location line="+3"/>
         <source>Address does not refer to a key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../blockbrowsermodel.cpp" line="+57"/>
+        <source>%1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2870,6 +2905,19 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
 </context>
 <context>
+    <name>pubitem</name>
+    <message>
+        <location filename="../forms/pubitem.ui" line="+26"/>
+        <source>Form</source>
+        <translation type="unfinished">Vorm</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>PubKey:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>toppercash-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+171"/>
@@ -3539,19 +3587,6 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation>U dient rpcpassword=&lt;wachtwoord&gt; in te stellen in het configuratiebestand:
 %s
 Als het bestand niet bestaat, maak het dan aan, met een alleen-lezen permissie.</translation>
-    </message>
-</context>
-<context>
-    <name>pubitem</name>
-    <message>
-        <location filename="../forms/pubitem.ui" line="+26"/>
-        <source>Form</source>
-        <translation type="unfinished">Vorm</translation>
-    </message>
-    <message>
-        <location line="+47"/>
-        <source>PubKey:</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

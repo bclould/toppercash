@@ -101,13 +101,14 @@ public:
         assert(hashGenesisBlock == uint256("0x037c7370c073400be6d0365119e783031f10f5821c31943a3f2987cf066ee515"));
         assert(genesis.hashMerkleRoot == uint256("0x70f2a8e539224fd7e4dbf668a21fbb9ad0eef52c07c93b2a953107e6b3b24bb9s"));
 //添加dnsseed
-        char *seeds[][2] = {"47.52.38.106","47.52.38.106","47.91.167.30","47.91.167.30"};
+//        char *seeds[][2] = {"47.52.38.106","47.52.38.106","47.91.167.30","47.91.167.30"};
+        char *seeds[][2] = {};
         for(size_t i = 0;i<sizeof(seeds)/sizeof(char*)/2;i++)
         {
                 vSeeds.push_back(CDNSSeedData(string(seeds[i][0]),string(seeds[i][1])));
         }
 
-        base58Prefixes[PUBKEY_ADDRESS] = list_of(6).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[PUBKEY_ADDRESS] = list_of(65).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SCRIPT_ADDRESS] = list_of(18).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SECRET_KEY] =     list_of(153).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();

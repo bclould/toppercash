@@ -100,7 +100,7 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
     nWeight(0),
     platformStyle(platformStyle)
 {
-    setWindowTitle(tr("toppercash") + " - " + tr("Wallet"));
+    setWindowTitle(tr("TOPPERCASH") + " - " + tr("Wallet"));
     resize(850, 550);
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
