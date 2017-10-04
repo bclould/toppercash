@@ -53,8 +53,8 @@ public:
         pchMessageStart[2] = 0x22;
         pchMessageStart[3] = 0x05;
         vAlertPubKey = ParseHex("0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284");
-        nDefaultPort = 55651;
-        nRPCPort = 55650;
+        nDefaultPort = 15651;
+        nRPCPort = 15650;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 4);
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
