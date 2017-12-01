@@ -956,7 +956,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Unix: ~/.toppercash
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "toppercash";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "topper_cash";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -968,10 +968,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "toppercash";
+    return pathRet / "topper_cash";
 #else
     // Unix
-    return pathRet / ".toppercash";
+    return pathRet / ".topper_cash";
 #endif
 #endif
 }

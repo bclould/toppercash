@@ -999,15 +999,7 @@ int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, i
     {
         year ++;
     }
-    //计算额外奖励 0-50000个区块 每50个 获得一个额外奖励。根据每一年的奖励总量
-    //    int64_t nReward = 0;
-    //    if(remain <= 50000 && remain % 50 == 0)
-    //    {
-    //           nReward = reward[year] / 1000 * COIN;
-    //    }
-    //    int64_t nSubsidy = (stakes[year] + reward[year]) / 52560 * COIN + nReward;
     int64_t nSubsidy = nCoinAge * (CENT * rate[year]) * 33 / (365 * 33 + 8);
-    //检查系统货币供应量
     if(pindexBest->nMoneySupply + nSubsidy > IPO_SHARE )
     {
         nSubsidy = IPO_SHARE - pindexBest->nMoneySupply;
